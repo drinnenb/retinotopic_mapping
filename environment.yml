@@ -19,3 +19,4 @@ dependencies:
     - PyDAQmx >= 1.3.2
     - psychopy >= 1.85.2
     - pyglet==1.2.4
+    - opencv-python
