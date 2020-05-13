@@ -1,0 +1,21 @@
+name: retinotopic_mapping
+channels:
+  - defaults
+dependencies:
+  - python
+  - pytest
+  - scipy
+  - numpy
+  - matplotlib
+  - h5py
+  - pillow
+  - configobj >= 5.0.6
+  - sphinx >= 1.6.3
+  - sphinx_rtd_theme
+  - numpydoc >= 0.7.0
+  - scikit-image < 0.15.0
+  - pip
+  - pip:
+    - PyDAQmx >= 1.3.2
+    - psychopy >= 1.85.2
+    - pyglet==1.2.4
