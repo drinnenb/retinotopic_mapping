@@ -77,23 +77,24 @@ lsn_is_include_edge = True
 ds_log_dir = r'D:\data'
 ds_backupdir = None
 ds_identifier = 'TEST'
-ds_display_iter = 1
+ds_display_iter = 2
 ds_mouse_id = 'MOUSE'
 ds_user_id = 'USER'
 ds_psychopy_mon = 'testMonitor'
 ds_is_by_index = True
 ds_is_interpolate = False
-ds_is_triggered = True
-ds_trigger_event = "positive_edge"
-ds_trigger_NI_dev = 'Dev1'
+ds_is_triggered = False #set to true if you want to start stimulus with trigger
+ds_trigger_event = "positive_edge" #trigger when turning on
+ds_trigger_NI_dev = 'Dev1' # device and lines to where trigger input is connected to
 ds_trigger_NI_port = 0
 ds_trigger_NI_line = 0
-ds_is_sync_pulse = False
-ds_sync_pulse_NI_dev = 'Dev1'
-ds_sync_pulse_NI_port = 1
-ds_sync_pulse_NI_line = 1
-ds_display_screen = 1
+ds_is_sync_pulse = True # wheter to send out a sync pulse, digital signal that is true for a few ms at beginning of each frame
+ds_sync_pulse_NI_dev = 'Dev1' # which device/port to use for sync pulse, connect this to another DAQ to record sync pulses
+ds_sync_pulse_NI_port = 0
+ds_sync_pulse_NI_line = 0
+ds_display_screen = 1 # 0 is normally main display, 1 and 2 are secondary displays
 ds_initial_background_color = 0.
+ds_save_sequence = False #if it should save display patterns as tiff stack
 # =================================================================================
 
 
@@ -132,7 +133,7 @@ ds = DisplaySequence(log_dir=ds_log_dir, backupdir=ds_backupdir,
                      sync_pulse_NI_port=ds_sync_pulse_NI_port,
                      sync_pulse_NI_line=ds_sync_pulse_NI_line,
                      display_screen=ds_display_screen,
-                     initial_background_color=ds_initial_background_color)
+                     initial_background_color=ds_initial_background_color,is_save_sequence= True)
 
 # display
 # =============================== display =========================================
