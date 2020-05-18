@@ -32,24 +32,24 @@ how to work with the different stimulus routines.
 
 
 # ======================== monitor parameters ==================================
-mon_resolution = (1200,1920) #enter your monitors resolution (height, width)
-mon_width_cm = 52 #enter your monitors width in cm
-mon_height_cm = 32 #enter your monitors height in cm
-mon_refresh_rate = 60  #enter your monitors height in Hz
+mon_resolution = (1080,1920) #enter your monitors resolution (height, width)
+mon_width_cm = 34.5 #enter your monitors width in cm
+mon_height_cm = 19.5 #enter your monitors height in cm
+mon_refresh_rate = 60  #enter your monitors rate in Hz
 
 # The following variables correspond to the geometry of your setup don't worry about them for now.
 mon_C2T_cm = mon_height_cm / 2.  # center (projection point from mouse eye to the monitor) to monitor top edge in cm
 mon_C2A_cm = mon_width_cm / 2.  # center (projection point from mouse eye to the monitor) to monitor anterior edge in cm
 mon_center_coordinates = (0., 60.) # the visual coordinates of center (altitude, azimuth)
-mon_dis_cm = 15. # cm from mouse eye to the monitor
+mon_dis_cm = 11. # cm from mouse eye to the monitor
 mon_downsample_rate = 10 # downsample rate of the displayed images relative to the monitor resolution.
 # the both numbers in mon_resolution should be divisble by this number
 # ======================== monitor parameters ==================================
 
 # ======================== indicator parameters ================================
-ind_width_cm = 3.
-ind_height_cm = 3.
-ind_position = 'northeast'
+ind_width_cm = 0.5
+ind_height_cm = 0.5
+ind_position = 'northwest'
 ind_is_sync = 'True'
 ind_freq = 1.
 # ======================== indicator parameters ================================
@@ -77,24 +77,24 @@ lsn_is_include_edge = True
 ds_log_dir = r'D:\data'
 ds_backupdir = None
 ds_identifier = 'TEST'
-ds_display_iter = 2
+ds_display_iter = 2 #10
 ds_mouse_id = 'MOUSE'
 ds_user_id = 'USER'
 ds_psychopy_mon = 'testMonitor'
 ds_is_by_index = True
 ds_is_interpolate = False
-ds_is_triggered = False #set to true if you want to start stimulus with trigger
+ds_is_triggered = True #set to true if you want to start stimulus with trigger
 ds_trigger_event = "positive_edge" #trigger when turning on
 ds_trigger_NI_dev = 'Dev1' # device and lines to where trigger input is connected to
-ds_trigger_NI_port = 0
-ds_trigger_NI_line = 0
+ds_trigger_NI_port = 1
+ds_trigger_NI_line = 1
 ds_is_sync_pulse = True # wheter to send out a sync pulse, digital signal that is true for a few ms at beginning of each frame
 ds_sync_pulse_NI_dev = 'Dev1' # which device/port to use for sync pulse, connect this to another DAQ to record sync pulses
-ds_sync_pulse_NI_port = 0
+ds_sync_pulse_NI_port = 1
 ds_sync_pulse_NI_line = 0
 ds_display_screen = 1 # 0 is normally main display, 1 and 2 are secondary displays
 ds_initial_background_color = 0.
-ds_save_sequence = False #if it should save display patterns as tiff stack
+ds_save_sequence = True #if it should save display patterns as tiff stack
 # =================================================================================
 
 
