@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 import StimulusRoutines as stim
 from MonitorSetup import Monitor, Indicator
 from DisplayStimulus import DisplaySequence
+import json
 
 """
 To get up and running quickly before performing any experiments it is 
@@ -51,7 +52,7 @@ ind_width_cm = 0.5
 ind_height_cm = 0.5
 ind_position = 'northwest'
 ind_is_sync = 'True'
-ind_freq = 1.
+ind_freq = .5
 # ======================== indicator parameters ================================
 
 # ============================ generic stimulus parameters ======================
@@ -67,7 +68,7 @@ lsn_min_distance = 40.
 lsn_grid_space = (4., 4.)
 lsn_probe_size = (4., 4.)
 lsn_probe_orientation = 0.
-lsn_probe_frame_num = 15
+lsn_probe_frame_num = 2
 lsn_sign = 'ON-OFF'
 lsn_iteration = 1
 lsn_is_include_edge = True
@@ -77,13 +78,13 @@ lsn_is_include_edge = True
 ds_log_dir = r'D:\data'
 ds_backupdir = None
 ds_identifier = 'TEST'
-ds_display_iter = 2 #10
+ds_display_iter = 1 #10
 ds_mouse_id = 'MOUSE'
 ds_user_id = 'USER'
 ds_psychopy_mon = 'testMonitor'
 ds_is_by_index = True
 ds_is_interpolate = False
-ds_is_triggered = True #set to true if you want to start stimulus with trigger
+ds_is_triggered = False #set to true if you want to start stimulus with trigger
 ds_trigger_event = "positive_edge" #trigger when turning on
 ds_trigger_NI_dev = 'Dev1' # device and lines to where trigger input is connected to
 ds_trigger_NI_port = 1

@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 import time
 from tools import FileTools as ft
 from tools.IO import nidaq as iodaq
+import json
 
 try:
     import skimage.external.tifffile as tf
@@ -664,6 +665,16 @@ class DisplaySequence(object):
         logFile.update({'presentation': displayLog})
 
         file_name = self.file_name + ".pkl"
+        path_1 = os.path.join(directory,self.file_name+'_frame_index.json')
+        data = self.seq_log['stimulation']['index_to_display']
+
+        with open(path_1, 'w') as fp:
+            json.dump(data, fp)
+        path_2 = os.path.join(directory,self.file_name+'_unique_frames.json')
+        data = self.displayed_frames
+
+        with open(path_2, 'w') as fp:
+            json.dump(data, fp)
 
         # generate full log dictionary
         path = os.path.join(directory, file_name)
