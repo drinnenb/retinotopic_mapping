@@ -70,7 +70,7 @@ lsn_probe_size = (5., 5.)
 lsn_probe_orientation = 0.
 lsn_probe_frame_num = 15 #duration of stimulus in frame rate units (60Hz, 15 corresponds to 250 ms)
 lsn_sign = 'ON-OFF'
-lsn_iteration = 100
+lsn_iteration = 115
 lsn_is_include_edge = True
 # ===============================================================================
 
@@ -84,7 +84,7 @@ ds_user_id = 'USER'
 ds_psychopy_mon = 'testMonitor'
 ds_is_by_index = True
 ds_is_interpolate = False
-ds_is_triggered = True #set to true if you want to start stimulus with trigger
+ds_is_triggered = False #set to true if you want to start stimulus with trigger
 ds_trigger_event = "positive_edge" #trigger when turning on
 ds_trigger_NI_dev = 'Dev1' # device and lines to where trigger input is connected to
 ds_trigger_NI_port = 1
@@ -95,7 +95,7 @@ ds_sync_pulse_NI_port = 1
 ds_sync_pulse_NI_line = 0
 ds_display_screen = 1 # 0 is normally main display, 1 and 2 are secondary displays
 ds_initial_background_color = 0.
-ds_save_sequence = True #if it should save display patterns as tiff stack
+ds_save_sequence = False #if it should save display patterns as tiff stack
 # =================================================================================
 
 
