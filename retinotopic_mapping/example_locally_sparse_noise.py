@@ -58,7 +58,7 @@ ind_freq = .5
 # ============================ generic stimulus parameters ======================
 pregap_dur = 2.
 postgap_dur = 3.
-background = 0.
+background = 0.4 #color from -1 to 1; when from 0 to 1, midgrey value is at 0.7 for this type of monitor
 coordinate = 'degree'
 # ===============================================================================
 
@@ -94,7 +94,7 @@ ds_sync_pulse_NI_dev = 'Dev1' # which device/port to use for sync pulse, connect
 ds_sync_pulse_NI_port = 1
 ds_sync_pulse_NI_line = 0
 ds_display_screen = 1 # 0 is normally main display, 1 and 2 are secondary displays
-ds_initial_background_color = 0.
+ds_initial_background_color = 0.4 #color from -1 to 1; when from 0 to 1, midgrey value is at 0.7 for this type of monitor
 ds_save_sequence = False #if it should save display patterns as tiff stack
 # =================================================================================
 
