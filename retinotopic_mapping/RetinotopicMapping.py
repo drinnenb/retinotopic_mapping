@@ -1122,9 +1122,6 @@ class RetinotopicMappingTrial(object):
         self.rawPatchMap = patchmap2
 
         return patchmap2
-    def _plotRawPatches2(self):
-        plt.figure()
-        patchMap = 
 
     def _getRawPatches(self, isPlot=False):
 
